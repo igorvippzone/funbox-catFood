@@ -1,0 +1,15 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+  margin: auto;
+  width: 100%;
+  padding-bottom: 50px;
+  @media (max-width: 1199px) {
+    gap: 5vw;
+  }
+  @media (max-width: 767px) {
+    gap: 40px;
+  }
+}

@@ -1,0 +1,182 @@
+@import "../../variable";
+
+.cardWrapper {
+  p,
+  h2,
+  h3 {
+    margin: 0;
+    padding: 0;
+  }
+
+  max-width: 320px;
+  width: 100%;
+
+  margin: 0 auto;
+
+  .border {
+    position: relative;
+    height: 488px;
+    border-radius: 12px;
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%, 0 10%);
+    cursor: pointer;
+    margin-bottom: 14px;
+    transition: background-color 0.3s;
+
+    .card {
+      background-image: url(../../assets/images/cat.png);
+      background-position: -24px calc(100% + 88px);
+      background-repeat: no-repeat;
+
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      width: calc(100% - 8px);
+      height: calc(100% - 8px);
+      background-color: #f2f2f2;
+      border-radius: 10px;
+      clip-path: polygon(14.7% 0, 100% 0, 100% 100%, 0 100%, 0 9.7%);
+
+      padding: 17px 47px;
+
+      .topName {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #666;
+        margin-bottom: 5px;
+      }
+
+      .title {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 56px;
+        color: #000;
+      }
+
+      .description {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+        color: #000;
+        margin-bottom: 15px;
+      }
+
+      .advantages {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        color: #666666;
+
+        span {
+          font-weight: 700;
+        }
+      }
+    }
+    .amount {
+      position: absolute;
+      background-color: $blue;
+      color: #fff;
+      bottom: 12px;
+      right: 12px;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 80px;
+      height: 80px;
+
+      font-weight: 400;
+      font-size: 18px;
+      transition: background-color 0.3s;
+      text-transform: uppercase;
+      .number {
+        font-weight: 400;
+        font-size: 42px;
+      }
+    }
+  }
+  .active {
+    background-color: $blue;
+
+    &:hover {
+      background-color: $blue-hover;
+
+      .amount {
+        background-color: $blue-hover;
+      }
+    }
+  }
+
+  .select {
+    background-color: $red;
+
+    .amount {
+      background-color: $red;
+    }
+    &:hover {
+      background-color: $red;
+
+      .amount {
+        background-color: $red;
+      }
+    }
+  }
+
+  .selectHover {
+    &:hover {
+      background-color: $red-hover;
+
+      .amount {
+        background-color: $red-hover;
+      }
+    }
+  }
+
+  .disabled {
+    background-color: $gray;
+    cursor: default;
+    .card {
+      opacity: 0.5;
+      .topName,
+      .title,
+      .description,
+      .advantages {
+        color: $gray;
+      }
+    }
+    .amount {
+      background-color: $gray;
+    }
+  }
+
+  .footerText {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    color: #fff;
+    text-align: center;
+
+    .button {
+      background-color: transparent;
+      border: none;
+      color: $blue;
+      font-weight: 700;
+      cursor: pointer;
+      transition: color 0.3s;
+      padding: 0;
+      margin-left: 5px;
+
+      &:hover {
+        color: $blue-hover;
+      }
+      span {
+        text-decoration: underline dashed;
+      }
+    }
+  }
+
+  .yellow {
+    color: $yellow;
+  }
+}
