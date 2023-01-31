@@ -17,7 +17,7 @@ const FoodList: FC = () => {
   };
 
   return (
-    <div className={s.list}>
+    <ul className={s.list}>
       {catFood.map((item) => {
         const selected = cart.includes(item.id);
 
@@ -34,7 +34,7 @@ const FoodList: FC = () => {
           />
         );
       })}
-    </div>
+    </ul>
   );
 };
 

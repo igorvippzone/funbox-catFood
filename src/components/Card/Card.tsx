@@ -80,7 +80,7 @@ const Card: FC<IProps> = ({ onAddCart, item, selected, topText }) => {
   };
 
   return (
-    <div className={s.cardWrapper}>
+    <li className={s.cardWrapper}>
       <div
         className={`${s.border} ${stylesCard}`}
         onClick={selectedHandler}
@@ -112,7 +112,7 @@ const Card: FC<IProps> = ({ onAddCart, item, selected, topText }) => {
       </div>
 
       {footerContent()}
-    </div>
+    </li>
   );
 };
 
